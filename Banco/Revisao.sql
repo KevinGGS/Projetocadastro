@@ -1,0 +1,16 @@
+-- COMANDOS EM MYSQL SE DIVIDEM EM DUAS LINGUAGENS
+-- DDL (Data Defininition Languagem)
+-- => comandos de definição do banco de dados
+-- CREATE DATABASE NAME
+-- DROP DATABASE NAME
+-- CREATE TABLE NAME (COLUNAS)
+-- DROP TABLE NAMe 
+
+-- ----------------------------------------------------------
+
+-- dml (dATA mANIPULATION lANGUAGE)
+-- => cOMANDOS DE MANIPULAÇÃO DE DADOS
+-- SELECT COLUNAS FROM TABELA
+-- INSERT INTO TABELA (COLUNAS) VALUES (VALORES)
+-- DELETE FROM TABELA 
+-- UPDATE COLUNAS FROM TABELA
