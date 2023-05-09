@@ -29,6 +29,7 @@
         echo"<td>". $row['nome_usuario'] ."</td>";
         echo"<td>". $row['email_usuario'] ."</td>";
         echo"<td>". $row['fone_usuario'] ."</td>";
+        echo "<td><a href='altera_usuario.php?id_usuario=" .$row['id_usuario']."'>alterar</a></td>";
         echo"</tr>";
         }while($row = mysqli_fetch_array($result))
         ?>
