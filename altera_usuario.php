@@ -1,7 +1,7 @@
 <?php
 include('conexao.php');
 $id_usuario = $_GET['id_usuario'];
-$sql = "SELECT * FROM usuario where $id_usuario=$id_usuario";
+$sql = "SELECT * FROM usuario where id_usuario=$id_usuario";
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_array($result);
 ?>
@@ -17,26 +17,27 @@ $row = mysqli_fetch_array($result);
 <body>
     <h1>Cadastro de usuarios - IFSP</h1>
     
-    <form action="cadastro_usuario.php" method="post">
+    <form action="altera_usuario_exe.php" method="post">
+    <input name='id_usuario' type="hidden" value="<?php echo $row['id_usuario']?>">
     <div>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome"
-        value="<?php echo $row ['nome_usuario']?>">
+        value="<?php echo $row['nome_usuario']?>">
     </div>
     <div>
         <label for="email">E-mail</label>
         <input type="text" name="email" id="email"
-        value="<?php echo $row ['email_usuario']?>">
+        value="<?php echo $row['email_usuario']?>">
     </div>
     <div>
         <label for="fone">Telefone</label>
-        <input type="tel" name="fone" id="fone" placeholder="Formato (18) 9999-8888" pattern="\([0-9]{2}\)[0-9]{4-5}-[0-9]{4}"
-        value="<?php echo $row ['fone_usuario']?>">
+        <input type="tel" name="fone" id="fone" placeholder="Formato (18)9999-8888" pattern="\([0-9]{2}\)[0-9]{4-5}-[0-9]{4}"
+        value="<?php echo $row['fone_usuario']?>">
     </div>
     <div>
         <label for="senha">Senha</label>
         <input type="text" name="senha" id="senha"
-        value="<?php echo $row ['senha']?>">
+        value="<?php echo $row['senha']?>">
     </div>
     <input type="submit" value="Salvar">
     </form>
