@@ -13,5 +13,3 @@ else
     echo "location.href='listar_usuarios.php';</script>";
 }
 ?>
-
-?>
