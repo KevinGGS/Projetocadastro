@@ -39,6 +39,9 @@ $row = mysqli_fetch_array($result);
         <input type="text" name="senha" id="senha"
         value="<?php echo $row['senha']?>">
     </div>
+    <div>
+        <input type="file" name="foto" accept="image/*">
+    </div>
     <input type="submit" value="Salvar">
     </form>
     <h1></h1>

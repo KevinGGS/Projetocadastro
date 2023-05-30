@@ -8,7 +8,7 @@ $senha = $_POST['senha'];
 
 echo "<h1>Alteração de dados</h1>";
 echo "<p>Usuario: $nome</p>";
-$sql = "update usuario set nome_usuario = '$nome', email_usuario = '$email', fone_usuario = '$fone', senha = '$senha' where id_usuario = '$id_usuario'";
+$sql = "update usuario set nome_usuario = '$nome', email_usuario = '$email', fone_usuario = '$fone', senha = '$senha', foto = '$nome_foto' where id_usuario = '$id_usuario'";
 
 echo $sql;
 $result = mysqli_query($con, $sql);
