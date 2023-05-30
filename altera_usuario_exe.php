@@ -1,5 +1,13 @@
 <?php
 include('conexao.php');
+$nome_foto = "";
+if(file_exists($_FILES['foto']['tmp_name']))
+{
+$pasta_destino = 'foto/';
+$extensao = strtolower(substr($_FILES['foto']['name'],-4));
+$nome_foto = $pasta_destino . date("Ymd-His") . $extensao;
+move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
+}
 $id_usuario = $_POST['id_usuario'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
